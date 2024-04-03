@@ -6,9 +6,17 @@ def inputPasscode():
     passcode = input("")
     return passcode
 
-def inputCC():
+def inputCardnum():
     creditCard = input("")
     return creditCard
+
+def input cardDate():
+    cardDate = input("")
+    return cardDate
+
+def inputCVV():
+    cvv = input("")
+    return
 
 def inputAddress():
     address = input("")
