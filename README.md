@@ -8,4 +8,18 @@
 # inputPasscode
 # inputCC
 # inputAddress
-
+# sortByMileage
+# inputFirstName
+# inputLastName
+# recentSearchesStack
+# createFavorite
+# purchaseHistory
+# changePassword
+# changeEmail
+# changeFirstName
+# changeLastName
+# sendConfirmation
+# sendReset
+# verifyLogin
+# checkout
+# displayList
