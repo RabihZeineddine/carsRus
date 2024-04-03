@@ -1,11 +1,11 @@
 class Node:
-    def __init__(self, num):
-        self.data = num
-        self.next = None
+    def __init__(user, num):
+        user.data = num
+        user.next = None
 
 
 class QuickSort:
-    def partitionLast(self, start, end):
+    def partitionLast(user, start, end):
         if (start == end or start == None or end == None):
             return start
 
@@ -31,17 +31,17 @@ class QuickSort:
 
         return Pivot_Last
 
-    def sort(self, start, end):
+    def sort(user, start, end):
         if (start == None or start == end or start == end.next):
             return
 
         # split list and partition recurse
-        Pivot_Last = self.partitionLast(start, end)
-        self.sort(start, Pivot_Last)
+        Pivot_Last = user.partitionLast(start, end)
+        user.sort(start, Pivot_Last)
 
 
         if (Pivot_Last != None and Pivot_Last == start):
-            self.sort(Pivot_Last.next, end)
+            user.sort(Pivot_Last.next, end)
 
         elif (Pivot_Last != None and Pivot_Last.next != None):
-            self.sort(Pivot_Last.next.next, end)
+            user.sort(Pivot_Last.next.next, end)
