@@ -67,25 +67,3 @@ class QuickSort:
 
         elif (Pivot_Last != None and Pivot_Last.next != None):
             self.sort(Pivot_Last.next.next, end)
-
-
-if __name__ == "__main__":
-    ll = QuickSort()
-    ll.addNode(30)
-    ll.addNode(3)
-    ll.addNode(4)
-    ll.addNode(20)
-    ll.addNode(5)
-
-    N = ll.head
-    while (N.next != None):
-        N = N.next
-
-    print("\nLinked List before sorting")
-    ll.printList(ll.head)
-
-    # Function call
-    ll.sort(ll.head, N)
-
-    print("\nLinked List after sorting")
-    ll.printList(ll.head)
