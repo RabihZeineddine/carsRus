@@ -1,4 +1,4 @@
-class Account:
+class account:
     def __init__(user, email, password, first_name, last_name):
         user.email = email
         user.password = password
@@ -19,3 +19,8 @@ def createAccount(email, password, firstname, lastname):
         "lastname": lastname
     }
     return user
+
+user_list = []
+
+def add_user()
+    user_list.append(account)
