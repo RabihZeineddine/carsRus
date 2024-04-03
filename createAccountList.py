@@ -11,7 +11,7 @@ class Account:
     def reset_password(user, new_password):
         user.password = new_password
 
-udef createAccount(email, password, firstname, lastname):
+def createAccount(email, password, firstname, lastname):
     user = {
         "email": email,
         "password": password,
