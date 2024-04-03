@@ -19,6 +19,7 @@ def createAccount(username, email, password, firstname, lastname):
         "password": password,
         "firstname": firstname,
         "lastname": lastname
+        user.add_user()
     }
     return user
 
