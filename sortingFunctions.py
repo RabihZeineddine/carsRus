@@ -5,28 +5,6 @@ class Node:
 
 
 class QuickSort:
-
-    def __init__(self):
-        self.head = None
-
-    def addNode(self, data):
-        if (self.head == None):
-            self.head = Node(data)
-            return
-
-        curr = self.head
-        while (curr.next != None):
-            curr = curr.next
-
-        new = Node(data)
-        curr.next = new
-
-    def printList(self, n):
-        while (n != None):
-            print(n.data, end=" ")
-            n = n.next
-
-
     def partitionLast(self, start, end):
         if (start == end or start == None or end == None):
             return start
