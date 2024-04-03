@@ -4,5 +4,8 @@ class Account:
     self.passWord = passWord
     self.firstName = firstName
     self.lastName = lastName
+
+def createAccount():
+  
     
 
