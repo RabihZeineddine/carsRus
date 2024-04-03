@@ -16,7 +16,7 @@ def input cardDate():
 
 def inputCVV():
     cvv = input("")
-    return
+    return cvv
 
 def inputAddress():
     address = input("")
