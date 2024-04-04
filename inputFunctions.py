@@ -6,11 +6,11 @@ def inputPasscode():
     passcode = input("")
     return passcode
 
-def inputCardnum():
+def inputCardNum():
     creditCard = input("")
     return creditCard
 
-def inputcardDate():
+def inputCardDate():
     cardDate = input("")
     return cardDate
 
