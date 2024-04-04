@@ -48,7 +48,7 @@ class account:
             print("Incorrect email.")
             return False
         
-    # Verify login credentials
+    # Verify user's password
     def verify_password(user, password):
         if password == user.password:
             print("Password verified successfully.")
