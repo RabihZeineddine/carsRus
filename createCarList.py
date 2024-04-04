@@ -8,6 +8,7 @@ def __init__(user, make, model, year, price, color, type, vin, favorites, milage
     user.type = type
     user.vin = vin
 
+#set functions
 def set_make(car, make)
     car.make = make
 
@@ -37,6 +38,29 @@ def add_to_fav(car)
 
 def remove_from_fav(car)
     car.favorites = false
+
+#get functions
+def get_make(car)
+    return car.make
+
+def get_model(car)
+    return car.model
+
+def get_year(car)
+    return car.year
+
+def get_price(car)
+    return car.price
+
+def get_color(car)
+    return car.color
+
+def get_type(car)
+    return car.type
+
+def get_vin(car)
+    return car.vin
+
 
 
 car_list = []
