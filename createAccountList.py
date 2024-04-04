@@ -40,7 +40,8 @@ class account:
     def get_lastname(user):
         return user.last_name
         
-     # Verify user's email 
+    # Verify user's email 
+    #for loop to compare all emails in data base to this one
     def verify_email(user, email):
         if email == user.email:
             print("Email verified successfully.")
