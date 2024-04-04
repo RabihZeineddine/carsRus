@@ -1,6 +1,6 @@
 class account:
-    # user constructor creates user with given information
-    def __init__(user,username, email, password, first_name, last_name):
+    # user constructor creates a user with given information
+    def __init__(user, username, email, password, first_name, last_name):
         user.username = username
         user.email = email
         user.password = password
