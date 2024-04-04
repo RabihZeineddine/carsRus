@@ -6,6 +6,39 @@ class account:
         user.first_name = first_name
         user.last_name = last_name
 
+    #get functions
+    def change_username(user, username)
+        user.username = username
+
+    def change_email(user, email)
+        user.email = email
+
+    def change_password(user, password)
+        user.password = password
+
+    def change_name(user, firstname, lastname)
+        user.first_name = firstname
+        user.last_name = lastname
+
+    #set functions
+    def get_username(car)
+        return username
+
+    def get_email(car)
+        return email
+
+    def get_password(car)
+        return password
+
+    def get_fullname(car)
+        return first_name, last_name
+
+    def get_firstname(car)
+        return firstnmae
+        
+    def get_lastname(car)
+        return lastname
+        
     # Verify user's email 
     def account_info_verification()
         
