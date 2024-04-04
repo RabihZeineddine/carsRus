@@ -39,13 +39,23 @@ class account:
     def get_lastname(car)
         return lastname
         
-    # Verify user's email 
-    def account_info_verification()
+     # Verify user's email 
+    def verify_email(user, email):
+        if email == user.email:
+            print("Email verified successfully.")
+            return True
+        else:
+            print("Incorrect email.")
+            return False
         
-        
-    # Verify login credentials
-    def verify_login():
-        
+    # Verify user's password
+    def verify_password(user, password):
+        if password == user.password:
+            print("Password verified successfully.")
+            return True
+        else:
+            print("Incorrect password.")
+            return False
     
     # Reset user password
     def reset_password(user, new_password):
