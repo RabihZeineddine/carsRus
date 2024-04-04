@@ -1,69 +1,67 @@
 class Cars:
-def __init__(user, make, model, year, price, color, type, vin, favorites, milage = None):
-    user.make = make
-    user.model = model
-    user.year = year
-    user.price = price
-    user.color = color
-    user.type = type
-    user.vin = vin
+    def __init__(self, make, model, year, price, color, type, vin, favorites, milage = None):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.price = price
+        self.color = color
+        self.type = type
+        self.vin = vin
 
-#set functions
-def set_make(car, make)
-    car.make = make
+    #set functions
+    def set_make(self, make):
+        self.make = make
 
-def set_model(car, model)
-    car.model = model
+    def set_model(self, model):
+        self.model = model
 
-def set_year(car, year)
-    car.year = year
-    
-def set_price(car, price)
-    car.price = price
+    def set_year(self, year):
+        self.year = year
+        
+    def set_price(self, price):
+        self.price = price
 
-def set_color(car, color)
-    car.color = color
+    def set_color(self, color):
+        self.color = color
 
-def set_type(car, type)
-    car.type = type
+    def set_type(self, type):
+        self.type = type
 
-def set_vin(car, vin)
-    car.vin = vin
+    def set_vin(self, vin):
+        self.vin = vin
 
-def set_color(car, color)
-    car.color = color
+    def set_color(self, color):
+        self.color = color
 
-def add_to_fav(car)
-    car.favorites = true
+    def add_to_fav(self):
+        self.favorites = True
 
-def remove_from_fav(car)
-    car.favorites = false
+    def remove_from_fav(self):
+        self.favorites = False
 
-#get functions
-def get_make(car)
-    return car.make
+    #get functions
+    def get_make(self):
+        return self.make
 
-def get_model(car)
-    return car.model
+    def get_model(self):
+        return self.model
 
-def get_year(car)
-    return car.year
+    def get_year(self):
+        return self.year
 
-def get_price(car)
-    return car.price
+    def get_price(self):
+        return self.price
 
-def get_color(car)
-    return car.color
+    def get_color(self):
+        return self.color
 
-def get_type(car)
-    return car.type
+    def get_type(self):
+        return self.type
 
-def get_vin(car)
-    return car.vin
+    def get_vin(self):
+        return self.vin
 
+self_list = []
 
-
-car_list = []
-
-def add_user()
-    car_list.append(car)
+def add_car(car):
+    self_list.append(car)
