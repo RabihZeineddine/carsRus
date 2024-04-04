@@ -65,17 +65,6 @@ class account:
     def get_full_name(user):
         return f"{user.first_name} {user.last_name}"
 
-def createAccount(username, email, password, firstname, lastname):
-    user = {
-        "username": username,
-        "email": email,
-        "password": password,
-        "firstname": firstname,
-        "lastname": lastname
-        user.add_user()
-    }
-    return user
-
 user_list = []
 
 def add_user()
