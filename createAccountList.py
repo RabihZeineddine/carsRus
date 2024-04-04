@@ -1,49 +1,50 @@
 class account:
-    # user constructor creates a user with given information
-    def __init__(user, username, email, password, first_name, last_name):
-        user.username = username
-        user.email = email
-        user.password = password
-        user.first_name = first_name
-        user.last_name = last_name
+    # user constructor creates a user with given info
+    def __init__(self, username, email, password, first_name, last_name):
+        self.username = username
+        self.email = email
+        self.password = password
+        self.first_name = first_name
+        self.last_name = last_name
 
     # set functions
-    def change_username(user, username):
-        user.username = username
+    def change_username(self, username):
+        self.username = username
 
-    def change_email(user, email):
-        user.email = email
+    def change_email(self, email):
+        self.email = email
 
-    def change_password(user, password):
-        user.password = password
+    def change_password(self, password):
+        self.password = password
 
-    def change_name(user, firstname, lastname):
-        user.first_name = firstname
-        user.last_name = lastname
+    def change_name(self, firstname, lastname):
+        self.first_name = firstname
+        self.last_name = lastname
 
     # get functions
-    def get_username(user):
-        return user.username
+    def get_username(self):
+        return self.username
 
-    def get_email(user):
-        return user.email
+    def get_email(self):
+        return self.email
 
-    def get_password(user):
-        return user.password
+    def get_password(self):
+        return self.password
 
-    def get_fullname(user):
-        return user.first_name, user.last_name
+    def get_fullname(self):
+        return self.first_name, self.last_name
 
-    def get_firstname(user):
-        return user.first_name
+    def get_firstname(self):
+        return self.first_name
         
-    def get_lastname(user):
-        return user.last_name
+    def get_lastname(self):
+        return self.last_name
         
-    # Verify user's email 
-    #for loop to compare all emails in data base to this one
-    def verify_email(user, email):
-        if email == user.email:
+    # Verify user's email
+    # Note: Will be updated later when the database and front end give a better
+    #       vision of what is needed to implement this function.
+    def verify_email(self, email):
+        if email == self.email:
             print("Email verified successfully.")
             return True
         else:
@@ -51,8 +52,8 @@ class account:
             return False
         
     # Verify user's password
-    def verify_password(user, password):
-        if password == user.password:
+    def verify_password(self, password):
+        if password == self.password:
             print("Password verified successfully.")
             return True
         else:
@@ -60,14 +61,14 @@ class account:
             return False
     
     # Reset user password
-    def reset_password(user, new_password):
-        user.password = new_password
+    def reset_password(self, new_password):
+        self.password = new_password
 
     # Returns user's name
-    def get_full_name(user):
-        return f"{user.first_name} {user.last_name}"
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
 
 user_list = []
 
-def add_user()
+def add_user():
     user_list.append(account)
