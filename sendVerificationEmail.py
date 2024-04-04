@@ -22,9 +22,9 @@ def send_email(sender_email, sender_password, receiver_email, subject, message):
         smtp.send_message(msg)
 
 # Example usage
-sender_email = "your_email@gmail.com"
-sender_password = "your_password"
-receiver_email = "recipient_email@example.com"
+sender_email = "CarsRUsBot@gmail.com"
+sender_password = "ILoveProfessorKim"
+receiver_email = "zeineddirabih@gmail.com"
 subject = "Test Email"
 message = "This is a test email sent from Python."
 
