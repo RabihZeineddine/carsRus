@@ -10,7 +10,7 @@ def inputCardnum():
     creditCard = input("")
     return creditCard
 
-def input cardDate():
+def inputcardDate():
     cardDate = input("")
     return cardDate
 
