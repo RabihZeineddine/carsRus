@@ -1,6 +1,6 @@
 class account:
     # user constructor creates a user with given info
-    def __init__(self,username, email, password, first_name, last_name):
+    def __init__(self, username, email, password, first_name, last_name):
         self.username = username
         self.email = email
         self.password = password
@@ -40,7 +40,9 @@ class account:
     def get_lastname(self):
         return self.last_name
         
-     # Verify user's email 
+    # Verify user's email
+    # Note: Will be updated later when the database and front end give a better
+    #       vision of what is needed to implement this function.
     def verify_email(self, email):
         if email == self.email:
             print("Email verified successfully.")
