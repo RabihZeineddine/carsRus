@@ -42,7 +42,7 @@ class account:
         
     # Verify user's email
     # Note: Will be updated later when the database and front end give a better
-    #       vision of what is needed to implement this function.
+    # vision of what is needed to implement this function.
     def verify_email(self, email):
         if email == self.email:
             print("Email verified successfully.")
