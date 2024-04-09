@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars R' Us - Car Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="login.html" class="login-button">Login / Create Account</a>
+    <header class="site-header">
+        <h1>Cars R' Us</h1>
+        <span class="subtitle"><i>"From Hot Wheels to Real Deals!"</i></span>
+    </header>
+
+    <div class="search-container">
+        <form action="search-results.html"> <!-- Replace 'search-results.html' with the URL of your search results page -->
+            <select class="filter-dropdown">
+                <option value="year">Year</option>
+                <option value="make">Make</option>
+                <option value="model">Model</option>
+                <option value="price">Price</option>
+                <option value="mileage">Mileage</option>
+            </select>
+            <input type="text" class="search-input" placeholder="Search for cars...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+</body>
+</html>
