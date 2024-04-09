@@ -70,23 +70,23 @@ def sort_by_price(datdabase):
         Quicksort.sort(database[i].get_price(), database[len].get_price())
     }
 }
-def filter_by_make()
+def filter_by_make():
 {
     
 }
-def filter_by_model()
+def filter_by_model():
 {
     
 }
-def filter_by_type()
+def filter_by_type():
 {
     
 }
-def filter_by_color()
+def filter_by_color():
 {
     
 }
-def filter_by_fav()
+def filter_by_fav():
 {
     
 }
