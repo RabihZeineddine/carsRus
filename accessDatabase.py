@@ -7,7 +7,6 @@ def accessDB(sql_script):
     USER = "admin"
     PASSWORD = "CPSC362project"
     DATABASE = "Cars-R-Us"
-
     try:
         connection = pymysql.connect(
             host=ENDPOINT,
@@ -16,18 +15,11 @@ def accessDB(sql_script):
             password=PASSWORD,
             database=DATABASE
         )
-
         cursor = connection.cursor()
-
-
         cursor.execute(sql_script)
         output = cursor.fetchall()
-
         cursor.close()
-
         connection.close()
-
         return output
-
     except pymysql.Error as e:
         print("Error:", e)
