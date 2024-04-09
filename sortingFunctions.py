@@ -45,3 +45,48 @@ class QuickSort:
 
         elif (Pivot_Last != None and Pivot_Last.next != None):
             user.sort(Pivot_Last.next.next, end)
+
+def sort_by_miles(datdabase):
+{
+    len = dataabse.sizeof()
+    for i in range(len)
+    {
+        Quicksort.sort(database[i].get_miles(), database[len].get_miles())
+    }
+}
+def sort_by_year(datdabase):
+{
+    len = dataabse.sizeof()
+    for i in range(len)
+    {
+        Quicksort.sort(database[i].get_year(), database[len].get_year())
+    }
+}
+def sort_by_price(datdabase):
+{
+    len = dataabse.sizeof()
+    for i in range(len)
+    {
+        Quicksort.sort(database[i].get_price(), database[len].get_price())
+    }
+}
+def filter_by_make()
+{
+    
+}
+def filter_by_model()
+{
+    
+}
+def filter_by_type()
+{
+    
+}
+def filter_by_color()
+{
+    
+}
+def filter_by_fav()
+{
+    
+}
