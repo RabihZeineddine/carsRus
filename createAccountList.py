@@ -1,3 +1,5 @@
+import re
+
 class account:
     # user constructor creates a user with given info
     def __init__(self, username, email, password, first_name, last_name):
@@ -43,13 +45,14 @@ class account:
     # Verify user's email
     # Note: Will be updated later when the database and front end give a better
     # vision of what is needed to implement this function.
-    def verify_email(self, email):
-        if email == self.email:
-            print("Email verified successfully.")
-            return True
+    def verify_email(email):
+        # Valid Email register expression pattern
+        pattern = '^[a-zA-Z0-9][a-zA-Z0-9.-]*@[a-zA-Z]+\.[a-zA-Z]{2,}$'
+    
+        if re.search(email, pattern):
+            print('Email is valid:', email)
         else:
-            print("Incorrect email.")
-            return False
+            print('Email is invalid:', email)
         
     # Verify user's password
     def verify_password(self, password):
