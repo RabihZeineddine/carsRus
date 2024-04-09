@@ -42,7 +42,7 @@ class account:
     def get_lastname(self):
         return self.last_name
         
-    # Verify user's email
+    # Verify user's email address is valid
     # Note: Will be updated later when the database and front end give a better
     # vision of what is needed to implement this function.
     def verify_email(email):
