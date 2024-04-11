@@ -30,7 +30,7 @@ class QuickSort:
         end.data = temp
 
         return Pivot_Last
-
+    
     def sort(user, start, end):
         if (start == None or start == end or start == end.next):
             return
@@ -54,6 +54,7 @@ def sort_by_miles(datdabase):
         Quicksort.sort(database[i].get_miles(), database[len].get_miles())
     }
 }
+
 def sort_by_year(datdabase):
 {
     len = dataabse.sizeof()
@@ -62,6 +63,7 @@ def sort_by_year(datdabase):
         Quicksort.sort(database[i].get_year(), database[len].get_year())
     }
 }
+
 def sort_by_price(datdabase):
 {
     len = dataabse.sizeof()
@@ -70,22 +72,27 @@ def sort_by_price(datdabase):
         Quicksort.sort(database[i].get_price(), database[len].get_price())
     }
 }
+
 def filter_by_make():
 {
     
 }
+
 def filter_by_model():
 {
     
 }
+
 def filter_by_type():
 {
     
 }
+
 def filter_by_color():
 {
     
 }
+
 def filter_by_fav():
 {
     
