@@ -73,27 +73,37 @@ def sort_by_price(datdabase):
     }
 }
 
-def filter_by_make():
+def filter_by_make(carMake):
 {
-    
+    accessDB(SELECT *
+             FROM CARS-R-US
+             WHERE make == %carMake%)
 }
 
-def filter_by_model():
+def filter_by_model(carModel):
 {
-    
+    accessDB(SELECT *
+             FROM CARS-R-US
+             WHERE make == %carModel%)
 }
 
-def filter_by_type():
+def filter_by_type(carType):
 {
-    
+    accessDB(SELECT *
+             FROM CARS-R-US
+             WHERE make == %carType%)
 }
 
-def filter_by_color():
+def filter_by_color(carColor):
 {
-    
+    accessDB(SELECT *
+             FROM CARS-R-US
+             WHERE make == %carColor%)
 }
 
 def filter_by_fav():
 {
-    
+    accessDB(SELECT *
+             FROM CARS-R-US
+             WHERE fav == true)
 }
