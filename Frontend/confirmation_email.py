@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 
 app = Flask(__name__)
-app.config.from_pyfile('config>cfg')
+app.config.from_pyfile('config.cfg')
 mail = Mail(app)
 s = URLSafeTimedSerailizer('Thisisasecret!')
 @app.route('/', methods=['GET', 'POST'])
