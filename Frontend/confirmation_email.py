@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for
+from flask import Flask,request,url_for
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 
