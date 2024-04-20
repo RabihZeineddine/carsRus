@@ -24,7 +24,8 @@ def confirm_email(token):
   execpt SignatureExpited:
     return '<h1>The token expired!</h1>'
   return '<h1>this toekn works!</h1>'
-  
+
+
 if __name__ == '__main__':
   app.run(debug=True)
 
