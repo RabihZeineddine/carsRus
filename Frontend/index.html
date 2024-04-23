@@ -12,9 +12,8 @@
         <h1>Cars R' Us</h1>
         <span class="subtitle"><i>"From Hot Wheels to Real Deals!"</i></span>
     </header>
-
     <div class="search-container">
-        <form action="search-results.html"> <!-- Replace 'search-results.html' with the URL of your search results page -->
+        <form action="search-results.html" onsubmit="redirectToSearchResults(); return false;">
             <select class="filter-dropdown">
                 <option value="year">Year</option>
                 <option value="make">Make</option>
@@ -26,5 +25,6 @@
             <button type="submit" class="search-button">Search</button>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

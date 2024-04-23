@@ -1,0 +1,102 @@
+[
+  {
+    "VIN": 123456789,
+    "Make": "Honda",
+    "Model": "Civic",
+    "Year": 2020,
+    "Color": "Red",
+    "Price": 25000,
+    "Mileage": 15000,
+    "isNew": false
+  },
+  {
+    "VIN": 987654321,
+    "Make": "Honda",
+    "Model": "Accord",
+    "Year": 2018,
+    "Color": "Blue",
+    "Price": 30000,
+    "Mileage": 20000,
+    "isNew": false
+  },
+  {
+    "VIN": 456789123,
+    "Make": "Toyota",
+    "Model": "Camry",
+    "Year": 2021,
+    "Color": "Black",
+    "Price": 28000,
+    "Mileage": 10000,
+    "isNew": true
+  },
+  {
+    "VIN": 789123456,
+    "Make": "Toyota",
+    "Model": "Corolla",
+    "Year": 2019,
+    "Color": "White",
+    "Price": 22000,
+    "Mileage": 18000,
+    "isNew": false
+  },
+  {
+    "VIN": 234567890,
+    "Make": "Ford",
+    "Model": "Mustang",
+    "Year": 2017,
+    "Color": "Yellow",
+    "Price": 35000,
+    "Mileage": 25000,
+    "isNew": false
+  },
+  {
+    "VIN": 654321987,
+    "Make": "Chevrolet",
+    "Model": "Camaro",
+    "Year": 2016,
+    "Color": "Silver",
+    "Price": 32000,
+    "Mileage": 30000,
+    "isNew": false
+  },
+  {
+    "VIN": 135792468,
+    "Make": "BMW",
+    "Model": "3 Series",
+    "Year": 2019,
+    "Color": "Gray",
+    "Price": 40000,
+    "Mileage": 20000,
+    "isNew": false
+  },
+  {
+    "VIN": 246813579,
+    "Make": "Mercedes-Benz",
+    "Model": "C-Class",
+    "Year": 2020,
+    "Color": "Black",
+    "Price": 45000,
+    "Mileage": 15000,
+    "isNew": false
+  },
+  {
+    "VIN": 369258147,
+    "Make": "Audi",
+    "Model": "A4",
+    "Year": 2018,
+    "Color": "Blue",
+    "Price": 38000,
+    "Mileage": 22000,
+    "isNew": false
+  },
+  {
+    "VIN": 582741369,
+    "Make": "Tesla",
+    "Model": "Model S",
+    "Year": 2020,
+    "Color": "White",
+    "Price": 60000,
+    "Mileage": 10000,
+    "isNew": false
+  }
+]
