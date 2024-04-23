@@ -65,17 +65,17 @@ def filter_by_make(carMake):
 def filter_by_model(carModel):
     accessDB(SELECT *
              FROM CARS-R-US
-             WHERE make == %carModel%)
+             WHERE model == %carModel%)
 
 def filter_by_type(carType):
     accessDB(SELECT *
              FROM CARS-R-US
-             WHERE make == %carType%)
+             WHERE type == %carType%)
 
 def filter_by_color(carColor):
     accessDB(SELECT *
              FROM CARS-R-US
-             WHERE make == %carColor%)
+             WHERE color == %carColor%)
 
 def filter_by_fav():
     accessDB(SELECT *
