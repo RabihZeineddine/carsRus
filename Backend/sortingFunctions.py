@@ -42,6 +42,11 @@ class QuickSort:
         elif (Pivot_Last != None and Pivot_Last.next != None):
             user.sort(Pivot_Last.next.next, end)
 
+def search_db(search):
+    SELECT *
+    FROM CARS-R-US
+    WHERE model LIKE '%search%' OR make LIKE '%search%'
+
 def sort_by_miles(datdabase):
     len = dataabse.sizeof()
     for i in range(len)
