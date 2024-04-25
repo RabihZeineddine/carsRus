@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 # Function to send purchase confirmation email
 def send_confirmation_email(customer_email, purchase_details):
     # Email configuration
-    sender_email = 'Car-R-Us'               # Your email address
+    sender_email = 'CarRUs'               # Your email address
     sender_password = 'ILoveProfessorKim'   # Your email password
     smtp_server = 'smtp.gmail.com'          # Your SMTP server
     smtp_port = 587                         # Port for SMTP server (587 for TLS)
