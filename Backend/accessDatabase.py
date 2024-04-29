@@ -22,4 +22,4 @@ def accessDB(sql_script):
         connection.close()
         return output
     except pymysql.Error as e:
-        print("Error:", e)
+        print("Error:", e)  ;
