@@ -47,8 +47,7 @@ class account:
         return user.last_name
         
     # Verify user's email address is valid
-    # Note: Potentially unnecessary
-    def verify_email(email):
+    def is_valid_email(email):
         # Valid Email register expression pattern
         pattern = '^[a-zA-Z0-9][a-zA-Z0-9.-]*@[a-zA-Z]+\.[a-zA-Z]{2,}$'
     
