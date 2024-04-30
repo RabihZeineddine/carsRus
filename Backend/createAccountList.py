@@ -5,7 +5,7 @@ class account:
     def __init__(user, username, email, confirmEmail, password, first_name, last_name):
         user.username = username
         user.email = email
-        user.confirmEmail= false
+        user.confirmEmail = false
         user.password = password
         user.first_name = first_name
         user.last_name = last_name
@@ -47,8 +47,7 @@ class account:
         return user.last_name
         
     # Verify user's email address is valid
-    # Note: Will be updated later when the database and front end give a better
-    # vision of what is needed to implement this function.
+    # Note: Potentially unnecessary
     def verify_email(email):
         # Valid Email register expression pattern
         pattern = '^[a-zA-Z0-9][a-zA-Z0-9.-]*@[a-zA-Z]+\.[a-zA-Z]{2,}$'
