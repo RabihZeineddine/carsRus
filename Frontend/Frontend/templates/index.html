@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars R' Us - Car Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>
+    <header class="site-header">
+        <h1>Cars R' Us</h1>
+        <span class="subtitle"><i>"From Hot Wheels to Real Deals!"</i></span>
+    </header>
+    <div class="search-container">
+        <form action="{{ url_for('search_results') }}" method="GET">
+            <select class="filter-dropdown" name="filter">
+                <option value="year">Year</option>
+                <option value="make">Make</option>
+                <option value="model">Model</option>
+                <option value="price">Price</option>
+                <option value="mileage">Mileage</option>
+            </select>
+            <input type="text" class="search-input" name="query" placeholder="Search for cars...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
