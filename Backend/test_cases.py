@@ -4,11 +4,11 @@ import sortingFunctions.py as sortFunc
 import createAccountList.py as accFunc
 import inputFunctions.py as inFunc
 
-# Test Sorting Functions
+# Test Sorting Function (3 cases per test)
 
 
 # Test Account Creation
 
 
-# Test Input Functions
+# Test Search Feature
 
