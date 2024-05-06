@@ -20,7 +20,7 @@
         {% for car in cars %}
         <div class="car-tile">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='img/car-image-placeholder.jpg') }}" alt="Car Image">
+                <img src="/static/car-image-placeholder.jpg" alt="Car Image">
             </div>
             <div class="car-info">
                 <p><strong>VIN:</strong> {{ car.VIN }}</p>
