@@ -44,8 +44,12 @@
                     <p><strong>Price:</strong> ${{ car.Price }}</p>
                     <p><strong>Mileage:</strong> {{ car.Mileage }} miles</p>
                     <p><strong>Type:</strong> {{ car.Type }}</p>
+                    {% if 'user' in session %}
                     <input type="hidden" name="vin" value="{{ car.VIN }}">
                     <button class="add-to-favorites-button" onclick="addToFavorites('{{ car.VIN }}')">Add to Favorites</button>
+                    {% else %}
+                    <a href="{{ url_for('login') }}" class="login-reminder">Sign-In to View Favorites/Checkout</a>
+                    {% endif %}
                 </form>
                 {% if 'user' in session %}
                 <form action="{{ url_for('checkout') }}" method="POST">

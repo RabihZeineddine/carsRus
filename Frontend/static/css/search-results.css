@@ -12,7 +12,6 @@ body {
     padding: 0;
     background-size: cover;
     background-position: center;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +40,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 180px;
 }
 
 .car-tile {
@@ -150,7 +149,7 @@ body {
     margin-top: 10px;
 }
 
-.add-to-cart-button:hover {
+.add-to-favorites-button:hover {
     background-color: #1e7e34;
 }
 
@@ -192,7 +191,7 @@ body {
     left: 0;
     width: 100%;
     background-color: white;
-    padding: 20px;
+    padding: 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
@@ -200,4 +199,18 @@ body {
 .search-info p{
     text-align: center;
     flex-grow: 1;
+}
+
+.login-reminder {
+    font-size: 14px;
+    padding: 6px 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-reminder:hover {
+    background-color: #0056b3;
 }

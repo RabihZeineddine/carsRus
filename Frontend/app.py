@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 from car_data import cars
 from user_data import users
 import json 
+import random
+import string
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -170,13 +172,18 @@ def process_checkout():
     purchased_car = next((car for car in cars if car['VIN'] == vin), None)
     session['purchased_car'] = purchased_car
 
+    # Generate a random confirmation number
+    confirmation_number = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+    session['confirmation_number'] = confirmation_number
+
     # Process the checkout data as needed (e.g., store in a database, send confirmation email, etc.)
     return redirect(url_for('thank_you'))
 
 @app.route('/thank-you')
 def thank_you():
-    car = session.get('purchased_car')
-    return render_template('thank_you.html', car=car)
+    car = session.get('purchased_car') # get car
+    confirmation_number = session.get('confirmation_number') # get confirmation number
+    return render_template('thank_you.html', car=car, confirmation_number=confirmation_number)
 
 if __name__ == '__main__':
     app.run(debug=True)
