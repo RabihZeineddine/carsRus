@@ -1091,7 +1091,7 @@ cars = [
         "Type": "Convertible"
     },
     {
-        "VIN": generate_vin()
+        "VIN": generate_vin(),
         "Model": "Aventador",
         "Make": "Lamborghini",
         "Color": "Blue",
@@ -1191,7 +1191,7 @@ cars = [
         "Type": "Hatchback"
     },
     {
-        "VIN": generate_vin()
+        "VIN": generate_vin(),
         "Model": "Passat",
         "Make": "Volkswagen",
         "Color": "Gray",
