@@ -147,13 +147,36 @@ def favorites():
 @app.route('/clear-favorites', methods=['POST'])
 def clear_favorites():
     with open('favorites.json', 'w') as file:
-        json.dump([], file)        
+        json.dump([], file)
         return redirect(url_for('favorites'))
 
-@app.route('/checkout')
+@app.route('/checkout', methods=['GET', 'POST'])
 def checkout():
     if request.method == 'POST':
-        return render_template('checkout.html')
+        vin = request.form.get('vin')
+        car = next((car for car in cars if car['VIN'] == vin), None)
+        if car:
+            return render_template('checkout.html', car=car)
+    return redirect(url_for('search_results'))
+
+@app.route('/process-checkout', methods=['POST'])
+def process_checkout():
+    vin = request.form.get('vin')
+    name = request.form.get('name')
+    email = request.form.get('email')
+    address = request.form.get('address')
+
+    # Store purchased car in session before redirecting to next page
+    purchased_car = next((car for car in cars if car['VIN'] == vin), None)
+    session['purchased_car'] = purchased_car
+
+    # Process the checkout data as needed (e.g., store in a database, send confirmation email, etc.)
+    return redirect(url_for('thank_you'))
+
+@app.route('/thank-you')
+def thank_you():
+    car = session.get('purchased_car')
+    return render_template('thank_you.html', car=car)
 
 if __name__ == '__main__':
     app.run(debug=True)
