@@ -824,7 +824,7 @@ cars = [
         "Year": 2020,
         "Price": 45000,
         "Mileage": 15000,
-        "Type": "Sedan"
+        "Type": "Sedan, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -834,7 +834,7 @@ cars = [
         "Year": 2018,
         "Price": 85000,
         "Mileage": 20000,
-        "Type": "Sedan"
+        "Type": "Sedan, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -844,7 +844,7 @@ cars = [
         "Year": 2019,
         "Price": 95000,
         "Mileage": 18500,
-        "Type": "SUV"
+        "Type": "SUV, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -854,7 +854,7 @@ cars = [
         "Year": 2017,
         "Price": 55000,
         "Mileage": 22000,
-        "Type": "SUV"
+        "Type": "SUV, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -864,7 +864,7 @@ cars = [
         "Year": 2022,
         "Price": 200000,
         "Mileage": 12500,
-        "Type": "Convertible"
+        "Type": "Convertible, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -874,7 +874,7 @@ cars = [
         "Year": 2023,
         "Price": 47000,
         "Mileage": 14500,
-        "Type": "Sedan"
+        "Type": "Sedan, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -884,7 +884,7 @@ cars = [
         "Year": 2018,
         "Price": 90000,
         "Mileage": 19800,
-        "Type": "Sedan"
+        "Type": "Sedan, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -894,7 +894,7 @@ cars = [
         "Year": 2021,
         "Price": 105000,
         "Mileage": 16200,
-        "Type": "SUV"
+        "Type": "SUV, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -904,7 +904,7 @@ cars = [
         "Year": 2017,
         "Price": 58000,
         "Mileage": 25000,
-        "Type": "SUV"
+        "Type": "SUV, Electric"
     },
     {
         "VIN": generate_vin(),
@@ -914,6 +914,16 @@ cars = [
         "Year": 2019,
         "Price": 49000,
         "Mileage": 19800,
-        "Type": "Sedan"
+        "Type": "Sedan, Electric"
+    },
+        {
+        "VIN": generate_vin(),
+        "Model": "Miata",
+        "Make": "Mazda",
+        "Color": "Black",
+        "Year": 2019,
+        "Price": 49000,
+        "Mileage": 19800,
+        "Type": "Convertible"
     },
 ]

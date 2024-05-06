@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from car_data import cars
 from user_data import users
-import json
+import json 
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -106,7 +106,7 @@ def search_results():
     elif filter_type == 'model':
         filtered_cars = sorted(filtered_cars, key=lambda car: car['Model'])
     
-    cars_per_page = 20
+    cars_per_page = 10
     total_pages = (len(filtered_cars) + cars_per_page - 1) // cars_per_page
     
     start_index = (page - 1) * cars_per_page
@@ -122,7 +122,7 @@ def favorites():
         vin = request.form.get('vin')
         if vin:
             # Check if the car with the same VIN is already in favorites
-                with open('Frontend/favorites.json', 'r') as file:
+                with open('favorites.json', 'r') as file:
                     favorites = json.load(file)
                     for car in favorites:
                         if car['VIN'] == vin:
@@ -132,17 +132,23 @@ def favorites():
                 # If car with VIN not found in favorites, add it
                 for car in cars:
                     if car['VIN'] == vin:
-                        with open('Frontend/favorites.json', 'r+') as file:
+                        with open('favorites.json', 'r+') as file:
                             favorites.append(car)
                             file.seek(0)
                             json.dump(favorites, file, indent=4)
                             file.truncate()
                         break
     
-    with open('Frontend/favorites.json', 'r') as file:
+    with open('favorites.json', 'r') as file:
         favorites = json.load(file)
     
     return render_template('favorites.html', favorites=favorites) 
+
+@app.route('/clear-favorites', methods=['POST'])
+def clear_favorites():
+    with open('favorites.json', 'w') as file:
+        json.dump([], file)        
+        return redirect(url_for('favorites'))
 
 @app.route('/checkout')
 def checkout():

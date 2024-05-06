@@ -41,6 +41,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 250px;
 }
 
 .car-tile {
@@ -81,8 +82,8 @@ body {
 
 .logout-button {
     position: fixed;
-    top: 10px;
-    right: 200px;
+    top: 50px;
+    right: 10px;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #dc3545;
@@ -100,6 +101,7 @@ body {
 .pagination {
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .pagination a,
@@ -121,7 +123,7 @@ body {
 
 .favorites-button {
     position: fixed;
-    top: 40px;
+    top: 100px;
     right: 10px;
     padding: 10px 20px;
     font-size: 16px;
@@ -149,7 +151,7 @@ body {
 }
 
 .add-to-cart-button:hover {
-    background-color: #218838;
+    background-color: #1e7e34;
 }
 
 .checkout-button {
@@ -164,4 +166,38 @@ body {
 
 .checkout-button:hover {
     background-color: #218838;
+}
+
+/* reset button styling */
+.reset-button {
+	position: fixed;
+	top: 12px;
+	left: 11px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: #c4ccdc;
+	transition: transform 0.3s ease;
+}
+
+.reset-button:hover {
+	transform: scale(1.5);
+    background-color: transparent;
+}
+
+.search-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.search-info p{
+    text-align: center;
+    flex-grow: 1;
 }

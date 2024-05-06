@@ -43,3 +43,21 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* reset button styling */
+.reset-button {
+	position: fixed;
+	top: 12px;
+	left: 11px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: #c4ccdc;
+	transition: transform 0.3s ease;
+}
+
+.reset-button:hover {
+	transform: scale(1.5);
+    background-color: transparent;
+}

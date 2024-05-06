@@ -8,7 +8,7 @@
 </head>
 <body>
     {% if 'user' in session %}
-        <div class="user-info">Welcome, {{ session['user']['FirstName'] }}!</div>
+        <div class="user-info">Welcome, <b>{{ session['user']['FirstName'] }}</b>!</div>
         <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
     {% else %}
         <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>

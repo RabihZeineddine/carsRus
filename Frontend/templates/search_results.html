@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results | Cars R' Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/search-results.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    {% if 'user' in session %}
-        <div class="user-info">Welcome, {{ session['user']['FirstName'] }}!</div>
-        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
-    {% else %}
-        <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>
-    {% endif %}
-    {% if 'user' in session %}
-    <a href="{{ url_for('favorites') }}" class="favorites-button">
-        <i class="fas fa-shopping-favorites"></i> Favorites
-    </a>
-{% endif %}
-    <h1>Cars R' Us | Search Results</h1>
-    <p>Search Query: {{ search_query }}</p>
-    <p>Filter Type: {{ filter_type }}</p>
+    <div class="search-header">
+        {% if 'user' in session %}
+            <div class="user-info">Welcome, <b>{{ session['user']['FirstName'] }}</b>!</div>
+            <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>
+        {% endif %}
+        {% if 'user' in session %}
+        <a href="{{ url_for('favorites') }}" class="favorites-button">
+            <i class="fas fa-shopping-favorites"></i> Favorites
+        </a>
+        {% endif %}
+        <!-- Reset Button -->
+        <a href="{{ url_for('index') }}" class="reset-button"><i class="fas fa-home"></i></a>
+        <div class="search-info">
+            <h1>Cars R' Us | Search Results</h1>
+            <p>Search Query: {{ search_query }}</p>
+            <p>Filter Type: {{ filter_type }}</p>
+        </div>
+    </div>
     <div id="search-results">
         {% for car in cars %}
         <div class="car-tile">
