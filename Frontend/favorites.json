@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "VIN": "V5KJWM922P7SD8NB9",
+        "Make": "BMW",
+        "Model": "X5",
+        "Year": 2020,
+        "Color": "Silver",
+        "Price": 50000,
+        "Mileage": 10000,
+        "Type": "SUV"
+    },
+    {
+        "VIN": "WM6V4N8TFPHRGHZVC",
+        "Make": "Chevrolet",
+        "Model": "Camaro",
+        "Year": 2018,
+        "Color": "Yellow",
+        "Price": 32000,
+        "Mileage": 25000,
+        "Type": "Coupe"
+    }
+]

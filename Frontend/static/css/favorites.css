@@ -26,6 +26,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
+    position: relative;
 }
 
 .favorites-item-image {
@@ -94,7 +95,21 @@
     transition: background-color 0.3s;
     margin-top: 20px;
     }
-    
+
 #clear-favorites-button:hover {
     background-color: #c82333;
+}
+
+.favorites-item-details .checkout-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
 }

@@ -35,7 +35,12 @@
                         <p><strong>Price:</strong> ${{ item.Price }}</p>
                         <p><strong>Mileage:</strong> {{ item.Mileage }} miles</p>
                         <p><strong>Type:</strong> {{ item.Type }}</p>
-                        <!-- Add more car details as needed -->
+                        {% if 'user' in session %}
+                        <form action="{{ url_for('checkout') }}" method="POST">
+                            <input type="hidden" name="vin" value="{{ item.VIN }}">
+                            <button class="checkout-button">Checkout</button>
+                        </form>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}
