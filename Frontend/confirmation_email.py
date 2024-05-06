@@ -1,33 +1,33 @@
-from flask import Flask, request, url_for
-from flask_mail import Mail, Message
-from itsdangerous import URLSafeTimedSerializer, SignatureExpired
-
-app = Flask(__name__)
-app.config.from_pyfile('config.cfg')
-mail = Mail(app)
-s = URLSafeTimedSerailizer('Thisisasecret!')
-@app.route('/', methods=['GET', 'POST'])
-
-def index():
-  if request.method == 'GET':
-    return '<form action="/" method="POST"><index name="email"><import type="submit"></form>'
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+#from Car_data.py import *
+    #Function to send purchase confirmation email
+def purchase_confirmation_email(customer_email):
+    # Email configuration
+    sender_email = 'carsrus@gmail.com'               # Your email address
+    sender_password = 'trmy fryn dsvk icij'   # Your email password
+    smtp_server = 'smtp.gmail.com'             # Your SMTP server
+    smtp_port = 587                           # Port for SMTP server (587 for TLS)
     
-  email = request.form['email']
-  token = s.dumps(email, salt='email-confirm')
-  msg = Message('confirm Email', sender='CarsRUsBot@gmail.com', recipiants=[email])
-  link = url_for('confirm_email', token = token, _external=True)
-  msg.body('confirm your email here {}'.format(link))
-  mail.send(msg) 
-  return '<h1>please confirm you email for Cars-R_Us {}. THe token is {}</h1>'.format(email, token)
-@app.reoute('/confirm_email/<token>')
+    # Construct the email message
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = customer_email
+    msg['Subject'] = 'Purchase Confirmation'
+    
+    #link and import information about the car
+    # Create email body
+    body = f"Dear Customer,\n\nThank you for your purchase! We Hope you enjoy Your new Ride!\n\n\nBest regards,\nCars R Us"
+    msg.attach(MIMEText(body, 'plain'))
 
-def confirm_email(token):
-  try:
-    email = s.loads(toekn, salt='email=confirm', max_age=600)
-  execpt SignatureExpited:
-    return '<h1>The token expired!</h1>'
-  return '<h1>this toekn works!</h1>'
-
-if __name__ == '__main__':
-  app.run(debug=True)
-
+    # Send the email
+    try:
+        with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.sendmail(sender_email, customer_email, msg.as_string())
+            print("Purchase confirmation email sent successfully.")
+            server.quit()
+    except Exception as e:
+        print(f"Failed to send purchase confirmation email: {e}")
