@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Cars R' Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    {% if 'user' in session %}
+        <div class="user-info">Welcome, {{ session['user']['FirstName'] }}!</div>
+        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>
+    {% endif %}
+
+    <h1>Checkout</h1>
+
+    <div class="checkout-container">
+        <div class="checkout-item">
+            <div class="favorites-item-image">
+                <img src="{{ url_for('static', filename='img/car-image-placeholder.jpg') }}" alt="Car Image">
+            </div>
+            <div class="favorites-item-details">
+                <p><strong>Make:</strong> {{ item.Make }}</p>
+                <p><strong>Model:</strong> {{ item.Model }}</p>
+                <p><strong>Year:</strong> {{ item.Year }}</p>
+                <p><strong>Price:</strong> ${{ item.Price }}</p>
+                <!-- Add more car details as needed -->
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <a href="{{ url_for('index') }}" class="continue-shopping">Continue Shopping</a>
+</body>
+</html>

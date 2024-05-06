@@ -144,5 +144,10 @@ def favorites():
     
     return render_template('favorites.html', favorites=favorites) 
 
+@app.route('/checkout')
+def checkout():
+    if request.method == 'POST':
+        return render_template('checkout.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -27,8 +27,8 @@
             <div class="car-image">
                 <img src="{{ url_for('static', filename='img/car-image-placeholder.jpg') }}" alt="Car Image">
             </div>
-            <form action="/favorites" method="POST">
-                <div class="car-info">
+            <div class="car-info">
+                <form action="/favorites" method="POST">
                     <p><strong>VIN:</strong> {{ car.VIN }}</p>
                     <p><strong>Make:</strong> {{ car.Make }}</p>
                     <p><strong>Model:</strong> {{ car.Model }}</p>
@@ -39,8 +39,12 @@
                     <p><strong>Type:</strong> {{ car.Type }}</p>
                     <input type="hidden" name="vin" value="{{ car.VIN }}">
                     <button class="add-to-favorites-button" onclick="addToFavorites('{{ car.VIN }}')">Add to Favorites</button>
-                </div>
-            </form>
+                </form>
+                <form action="/checkout" method="POST">
+                    <input type="hidden" name="vin" value="{{ car.VIN }}">
+                    <button class="checkout-button" onclick="checkout('{{ car.VIN }}')">Checkout</button>
+                </form>
+            </div>
         </div>
         {% endfor %}
     </div>

@@ -1,2 +1,62 @@
 [
+    {
+        "VIN": "87J0JLLR0EFZ2T9FC",
+        "Make": "Toyota",
+        "Model": "Camry",
+        "Year": 2019,
+        "Color": "Blue",
+        "Price": 28000,
+        "Mileage": 20000,
+        "Type": "Sedan"
+    },
+    {
+        "VIN": "VM30ZIF4O3OI3K3VE",
+        "Make": "Honda",
+        "Model": "Civic",
+        "Year": 2020,
+        "Color": "Red",
+        "Price": 25000,
+        "Mileage": 15000,
+        "Type": "Sedan"
+    },
+    {
+        "VIN": "UDMJG7RGI8DHFUSLU",
+        "Model": "Civic",
+        "Make": "Honda",
+        "Color": "Red",
+        "Year": 2020,
+        "Price": 25000,
+        "Mileage": 15000,
+        "Type": "Sedan"
+    },
+    {
+        "VIN": "YQQPJ29690GC6NJ83",
+        "Model": "Civic",
+        "Make": "Honda",
+        "Color": "Red",
+        "Year": 2020,
+        "Price": 25000,
+        "Mileage": 15000,
+        "Type": "Sedan"
+    },
+    {
+        "VIN": "4BS6AHDOX54CCMPDF",
+        "Make": "BMW",
+        "Model": "X5",
+        "Year": 2020,
+        "Color": "Silver",
+        "Price": 50000,
+        "Mileage": 10000,
+        "Type": "SUV"
+    },
+    {
+        "VIN": "0PS4HIK59VIZJ1W8O",
+        "Make": "Tesla",
+        "Model": "Model 3",
+        "Year": 2021,
+        "Color": "Red",
+        "Price": 48000,
+        "Mileage": 3000,
+        "Type": "Electric"
+    }
 ]
