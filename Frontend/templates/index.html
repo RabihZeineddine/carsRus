@@ -14,8 +14,8 @@
         <a href="{{ url_for('login') }}" class="login-button">Login / Create Account</a>
     {% endif %}
     {% if 'user' in session %}
-    <a href="{{ url_for('cart') }}" class="cart-button">
-        <i class="fas fa-shopping-cart"></i> Cart
+    <a href="{{ url_for('favorites') }}" class="favorites-button">
+        <i class="fas fa-shopping-favorites"></i> Favorites
     </a>
     {% endif %}
     <header class="site-header">

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from car_data import cars
 from user_data import users
+import json
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -72,6 +73,10 @@ def search_results():
         if filter_type == 'year':
             try:
                 start_year, end_year = map(int, search_query.split(','))
+                if start_year > end_year:
+                    temp = start_year
+                    start_year = end_year
+                    end_year = temp
                 filtered_cars = [car for car in filtered_cars if start_year <= car['Year'] <= end_year]
                 filtered_cars = sorted(filtered_cars, key=lambda car: car['Year'])  # Sort by year
             except (ValueError, TypeError):
@@ -111,9 +116,33 @@ def search_results():
     return render_template('search_results.html', cars=paginated_cars, search_query=search_query,
                            filter_type=filter_type, page=page, total_pages=total_pages)
 
-@app.route('/cart')
-def cart():
-    return render_template('cart.html')
+@app.route('/favorites', methods=['GET', 'POST'])
+def favorites():
+    if request.method == 'POST':
+        vin = request.form.get('vin')
+        if vin:
+            # Check if the car with the same VIN is already in favorites
+                with open('Frontend/favorites.json', 'r') as file:
+                    favorites = json.load(file)
+                    for car in favorites:
+                        if car['VIN'] == vin:
+                            # Car with the same VIN already exists, no need to add
+                            return redirect(url_for('favorites'))
+                
+                # If car with VIN not found in favorites, add it
+                for car in cars:
+                    if car['VIN'] == vin:
+                        with open('Frontend/favorites.json', 'r+') as file:
+                            favorites.append(car)
+                            file.seek(0)
+                            json.dump(favorites, file, indent=4)
+                            file.truncate()
+                        break
+    
+    with open('Frontend/favorites.json', 'r') as file:
+        favorites = json.load(file)
+    
+    return render_template('favorites.html', favorites=favorites) 
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -122,7 +122,7 @@ body {
     background-color: #c82333;
 }
 
-.cart-button {
+.favorites-button {
     position: fixed;
     top: 40px;
     right: 10px;
@@ -137,6 +137,6 @@ body {
     text-decoration: none;
 }
 
-.cart-button:hover {
+.favorites-button:hover {
     background-color: #218838;
 }
