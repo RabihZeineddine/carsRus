@@ -5,6 +5,8 @@ def generate_vin():
     characters = string.ascii_uppercase + string.digits
     return ''.join(random.choice(characters) for _ in range(17))
 
+car_types = ['Sedan', 'SUV', 'Compact', 'Electric', 'Hatchback', 'Coupe', 'Convertible', 'Van', 'Truck']
+
 cars = [
     {
         "VIN": generate_vin(),
@@ -75,6 +77,16 @@ cars = [
         "Price": 45000,
         "Mileage": 18000,
         "Type": 'Sedan'
+    },
+    {
+        "VIN": "789321654",
+        "Model": "Tundra",
+        "Make": "Toyota",
+        "Color": "Black",
+        "Year": 2022,
+        "Price": 29600,
+        "Mileage": 21600,
+        "Type": "Truck"
     },
     {
         "VIN": generate_vin(),
@@ -158,6 +170,56 @@ cars = [
     },
     {
         "VIN": generate_vin(),
+        "Model": "Odyssey",
+        "Make": "Honda",
+        "Color": "Red",
+        "Year": 2023,
+        "Price": 33200,
+        "Mileage": 11500,
+        "Type": "Van"
+    },
+    {   
+        "VIN": generate_vin(),
+        "Model": "Odyssey",
+        "Make": "Honda",
+        "Color": "Black",
+        "Year": 2022,
+        "Price": 34000,
+        "Mileage": 13200,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Odyssey",
+        "Make": "Honda",
+        "Color": "Silver",
+        "Year": 2017,
+        "Price": 32700,
+        "Mileage": 22200,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Odyssey",
+        "Make": "Honda",
+        "Color": "Blue",
+        "Year": 2017,
+        "Price": 33400,
+        "Mileage": 23500,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Odyssey",
+        "Make": "Honda",
+        "Color": "Red",
+        "Year": 2020,
+        "Price": 32800,
+        "Mileage": 24100,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
         "Model": "Civic",
         "Make": "Honda",
         "Color": "Red",
@@ -198,16 +260,6 @@ cars = [
     },
     {
         "VIN": generate_vin(),
-        "Model": "Odyssey",
-        "Make": "Honda",
-        "Color": "White",
-        "Year": 2022,
-        "Price": 32500,
-        "Mileage": 12500,
-        "Type": "Van"
-    },
-    {
-        "VIN": generate_vin(),
         "Model": "Corolla",
         "Make": "Toyota",
         "Color": "Red",
@@ -228,6 +280,47 @@ cars = [
     },
     {
         "VIN": generate_vin(),
+        "Model": "Sienna",
+        "Make": "Toyota",
+        "Color": "Blue",
+        "Year": 2022,
+        "Price": 21900,
+        "Mileage": 9800,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Sienna",
+        "Make": "Toyota",
+        "Color": "Blue",
+        "Year": 2020,
+        "Price": 21400,
+        "Mileage": 14500,
+        "Type": "Van"
+    },
+    {
+        "VIN": "456321987",
+        "Model": "Sienna",
+        "Make": "Toyota",
+        "Color": "Gray",
+        "Year": 2020,
+        "Price": 22000,
+        "Mileage": 16900,
+        "Type": "Van"
+    },
+
+    {
+        "VIN": generate_vin(),
+        "Model": "Sienna",
+        "Make": "Toyota",
+        "Color": "Silver",
+        "Year": 2018,
+        "Price": 22300,
+        "Mileage": 19500,
+        "Type": "Van"
+    },
+    {
+        "VIN": generate_vin(),
         "Model": "Rav4",
         "Make": "Toyota",
         "Color": "Silver",
@@ -245,6 +338,16 @@ cars = [
         "Price": 28200,
         "Mileage": 22000,
         "Type": "SUV"
+    },
+    {
+        "VIN": "987321654",
+        "Model": "Tacoma",
+        "Make": "Toyota",
+        "Color": "Black",
+        "Year": 2022,
+        "Price": 29600,
+        "Mileage": 21600,
+        "Type": "Truck"
     },
     {
         "VIN": generate_vin(),
@@ -768,6 +871,27 @@ cars = [
     },
     {
         "VIN": generate_vin(),
+        "Model": "2 Series",
+        "Make": "BMW",
+        "Color": "Black",
+        "Year": 2020,
+        "Price": 44000,
+        "Mileage": 15700,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "2 Series",
+        "Make": "BMW",
+        "Color": "Black",
+        "Year": 2017,
+        "Price": 45000,
+        "Mileage": 21000,
+        "Type": "Coupe"
+    },
+
+    {
+        "VIN": generate_vin(),
         "Model": "7 Series",
         "Make": "BMW",
         "Color": "Gray",
@@ -824,7 +948,7 @@ cars = [
         "Year": 2020,
         "Price": 45000,
         "Mileage": 15000,
-        "Type": "Sedan"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -834,7 +958,7 @@ cars = [
         "Year": 2018,
         "Price": 85000,
         "Mileage": 20000,
-        "Type": "Sedan"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -844,7 +968,7 @@ cars = [
         "Year": 2019,
         "Price": 95000,
         "Mileage": 18500,
-        "Type": "SUV"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -854,7 +978,7 @@ cars = [
         "Year": 2017,
         "Price": 55000,
         "Mileage": 22000,
-        "Type": "SUV"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -864,7 +988,7 @@ cars = [
         "Year": 2022,
         "Price": 200000,
         "Mileage": 12500,
-        "Type": "Convertible"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -874,7 +998,7 @@ cars = [
         "Year": 2023,
         "Price": 47000,
         "Mileage": 14500,
-        "Type": "Sedan"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -884,7 +1008,7 @@ cars = [
         "Year": 2018,
         "Price": 90000,
         "Mileage": 19800,
-        "Type": "Sedan"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -894,7 +1018,7 @@ cars = [
         "Year": 2021,
         "Price": 105000,
         "Mileage": 16200,
-        "Type": "SUV"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -904,7 +1028,7 @@ cars = [
         "Year": 2017,
         "Price": 58000,
         "Mileage": 25000,
-        "Type": "SUV"
+        "Type": "Electric"
     },
     {
         "VIN": generate_vin(),
@@ -914,6 +1038,166 @@ cars = [
         "Year": 2019,
         "Price": 49000,
         "Mileage": 19800,
+        "Type": "Electric"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "488 GTB",
+        "Make": "Ferrari",
+        "Color": "Red",
+        "Year": 2020,
+        "Price": 300000,
+        "Mileage": 5000,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "812 Superfast",
+        "Make": "Ferrari",
+        "Color": "Yellow",
+        "Year": 2018,
+        "Price": 350000,
+        "Mileage": 8000,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "SF90 Stradale",
+        "Make": "Ferrari",
+        "Color": "Black",
+        "Year": 2021,
+        "Price": 500000,
+        "Mileage": 2000,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Huracan",
+        "Make": "Lamborghini",
+        "Color": "Yellow",
+        "Year": 2020,
+        "Price": 250000,
+        "Mileage": 5000,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Portofino",
+        "Make": "Ferrari",
+        "Color": "Blue",
+        "Year": 2019,
+        "Price": 250000,
+        "Mileage": 10000,
+        "Type": "Convertible"
+    },
+    {
+        "VIN": generate_vin()
+        "Model": "Aventador",
+        "Make": "Lamborghini",
+        "Color": "Blue",
+        "Year": 2018,
+        "Price": 400000,
+        "Mileage": 8000,
+        "Type": "Coupe"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "718 Boxster",
+        "Make": "Porsche",
+        "Color": "White",
+        "Year": 2020,
+        "Price": 85000,
+        "Mileage": 13000,
+        "Type": "Convertible"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Beetle",
+        "Make": "Volkswagen",
+        "Color": "Green",
+        "Year": 2018,
+        "Price": 20000,
+        "Mileage": 19800,
+        "Type": "Convertible"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "ID.4",
+        "Make": "Volkswagen",
+        "Color": "Red",
+        "Year": 2021,
+        "Price": 38000,
+        "Mileage": 16200,
+        "Type": "SUV"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Golf GTI",
+        "Make": "Volkswagen",
+        "Color": "Blue",
+        "Year": 2017,
+        "Price": 30000,
+        "Mileage": 25000,
+        "Type": "Hatchback"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Jetta",
+        "Make": "Volkswagen",
+        "Color": "Black",
+        "Year": 2019,
+        "Price": 23000,
+        "Mileage": 19800,
         "Type": "Sedan"
     },
+    {
+        "VIN": generate_vin(),
+        "Model": "Passat",
+        "Make": "Volkswagen",
+        "Color": "White",
+        "Year": 2020,
+        "Price": 27000,
+        "Mileage": 16200,
+        "Type": "Sedan"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Tiguan",
+        "Make": "Volkswagen",
+        "Color": "Silver",
+        "Year": 2018,
+        "Price": 29000,
+        "Mileage": 21300,
+        "Type": "SUV"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Atlas",
+        "Make": "Volkswagen",
+        "Color": "Red",
+        "Year": 2022,
+        "Price": 33000,
+        "Mileage": 11500,
+        "Type": "SUV"
+    },
+    {
+        "VIN": generate_vin(),
+        "Model": "Golf",
+        "Make": "Volkswagen",
+        "Color": "Black",
+        "Year": 2020,
+        "Price": 26000,
+        "Mileage": 5000,
+        "Type": "Hatchback"
+    },
+    {
+        "VIN": generate_vin()
+        "Model": "Passat",
+        "Make": "Volkswagen",
+        "Color": "Gray",
+        "Year": 2021,
+        "Price": 28000,
+        "Mileage": 15700,
+        "Type": "Sedan"
+    }
 ]
