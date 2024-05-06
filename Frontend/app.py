@@ -71,7 +71,12 @@ def search_results():
         if filter_type == 'year':
             try:
                 start_year, end_year = map(int, search_query.split(','))
+                if start_year > end_year:
+                    temp = start_year
+                    start_year = end_year
+                    end_year = temp
                 filtered_cars = [car for car in filtered_cars if start_year <= car['Year'] <= end_year]
+                filtered_cars = sorted(filtered_cars, key=lambda x: x['Year'])
             except (ValueError, TypeError):
                 pass
         elif  filter_type == 'price':
