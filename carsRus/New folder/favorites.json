@@ -1,0 +1,22 @@
+[
+    {
+        "VIN": "QL3RXLP930B6DYBI5",
+        "Model": "Explorer",
+        "Make": "Ford",
+        "Color": "Black",
+        "Year": 2017,
+        "Price": 28200,
+        "Mileage": 22000,
+        "Type": "SUV"
+    },
+    {
+        "VIN": "D5XW3ZBP4FYC7Q7U8",
+        "Model": "2 Series",
+        "Make": "BMW",
+        "Color": "White",
+        "Year": 2022,
+        "Price": 42000,
+        "Mileage": 12500,
+        "Type": "Coupe"
+    }
+]
