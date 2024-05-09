@@ -1,0 +1,23 @@
+[
+    {
+        "isAdmin": false,
+        "Email": "john@example.com",
+        "Password": "password123",
+        "FirstName": "John",
+        "LastName": "Doe"
+    },
+    {
+        "isAdmin": true,
+        "Email": "admin@example.com",
+        "Password": "adminpass",
+        "FirstName": "AdminFirst",
+        "LastName": "AdminLast"
+    },
+    {
+        "isAdmin": false,
+        "Email": "test@email.com",
+        "Password": "test123",
+        "FirstName": "test",
+        "LastName": "example"
+    }
+]
