@@ -18,15 +18,6 @@ Our virtual showroom feature offers users a 360-degree view of select vehicles, 
 # Secure Online Transactions: 
 Cars R Us prioritizes user security and privacy, implementing robust encryption and secure payment gateways to ensure that all transactions are safe and secure.
 
-# Flexible Financing Options: 
-To make car ownership more accessible, Cars R Us offers flexible financing options tailored to suit individual needs, including loan calculators and pre-approval processes.
-
-# Trade-In Assistance: 
-For users looking to upgrade their current vehicle, Cars R Us provides convenient trade-in assistance, allowing them to seamlessly transition to their new car while maximizing the value of their trade-in.
-
-# Customer Support: 
-Our dedicated customer support team is available to assist users at every step of the car-buying process, addressing inquiries, providing guidance, and ensuring a smooth and satisfactory experience.
-
 # Target Audience:
 Cars R Us caters to a diverse audience of car shoppers, including first-time buyers, seasoned enthusiasts, families, and individuals seeking reliable transportation solutions. Whether you're looking for a compact sedan, a spacious SUV, or a high-performance sports car, Cars R Us has something for everyone.
 
@@ -35,29 +26,3 @@ At Cars R Us, our mission is to redefine the car-buying experience by combining 
 
 # Conclusion:
 With its user-friendly interface, extensive inventory, and commitment to customer satisfaction, Cars R Us is poised to revolutionize the way people buy cars online. Whether you're in the market for your first vehicle or looking to upgrade to your dream car, Cars R Us is here to make your car-buying journey enjoyable, convenient, and stress-free. Welcome to the future of online car shopping - welcome to Cars R Us.
-
-# carsRus
-# sortByName
-# sortByPrice
-# sortByYear
-# filterByMake
-# filterByModel
-# inputEmail
-# inputPasscode
-# inputCC
-# inputAddress
-# sortByMileage
-# inputFirstName
-# inputLastName
-# recentSearchesStack
-# createFavorite
-# purchaseHistory
-# changePassword
-# changeEmail
-# changeFirstName
-# changeLastName
-# sendConfirmation
-# sendReset
-# verifyLogin
-# checkout
-# displayList
