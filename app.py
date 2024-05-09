@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from car_data import cars
-import json, random, string, atexit, smtplib
 from email.mime.text import MIMEText
+import json, random, string, atexit, smtplib, time
 
 # flask stuff
 app = Flask(__name__)
@@ -19,8 +19,9 @@ def login():
         email = request.form['email']
         password = request.form['password']
         
-        # finds user with matching email and password
+        # load users from user.json
         users = load_users()
+        # finds user with matching email and password
         user = next((user for user in users if user['Email'] == email and user['Password'] == password), None)
         
         # checks session data against user input fields
@@ -29,7 +30,7 @@ def login():
             return redirect(url_for('index'))
         # error if no matching user found
         else:
-            return "Invalid email or password. Please try again."
+            return "Invalid email or password. Please redirect back and try again."
     
     return render_template('login.html')
 
@@ -73,9 +74,47 @@ def signup():
     # render signup screen
     return render_template('signup.html')
 
-@app.route('/forgot-password')
+@app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_password():
+    if request.method == 'POST':
+        # get email from form and load user data
+        email = request.form.get('email')
+        users = load_users()
+
+        # find user with provided email
+        user = next((user for user in users if user['Email'] == email), None)
+
+        #if user found re-render with reset password prompt
+        if user:
+            return render_template('forgot-password.html', email=email)
+        else:
+            return "Email not found. Please redirect back."
+    # render for GET requests
     return render_template('forgot-password.html')
+
+@app.route('/reset-password', methods=['POST'])
+def reset_password():
+    # get email, password, and password confirmation from forms
+    email = request.form.get('email')
+    new_password = request.form.get('new_password')
+    confirm_password = request.form.get('confirm_password')
+    
+    # compare new password and password confirmation
+    if new_password != confirm_password:
+        return "Passwords do not match. Please Redirect Back"
+    
+    # load user data, find the user with provided email
+    users = load_users() 
+    user = next((user for user in users if user['Email'] == email), None)
+
+    # if user found, update password and save user data
+    if user:
+        user['Password'] = new_password
+        save_users(users)  # save the updated user data
+        return "Password has been reset successfully.Redirect back to the main page."
+    else:
+        return "User not found. Please Redirect back."
+    
 
 @app.route('/search-results')
 def search_results():
@@ -250,6 +289,7 @@ def send_confirmation_email(recipient, confirmation_number):
     # print a message to confirm that the email was sent
     print("Email sent to " + recipient)
 
+# function to load in list of users from users.json
 def load_users():
     try:
         with open('users.json', 'r') as file:
@@ -257,6 +297,7 @@ def load_users():
     except FileNotFoundError:
         return []
 
+# function to append new user to users.json
 def save_users(users):
     with open('users.json', 'w') as file:
         json.dump(users, file, indent=4)
